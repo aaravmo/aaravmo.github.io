@@ -37,14 +37,14 @@
 }
 
 .homepage-image-container {
-	width: 370px;
-	height: 370px;
+	width: 320px;
+	height: 320px;
 }
 
 .homepage-image-wrapper {
 	overflow: hidden;
 	border-radius: 10%;
-	transform: rotate(3deg);
+	/*transform: rotate(3deg);*/
 }
 
 .homepage-image-wrapper img {
@@ -78,6 +78,11 @@
 	padding-top: 40px;
 }
 
+.homepage-experiences {
+	flex-basis: 300px;
+	padding-top: 40px;
+}
+
 .homepage-articles {
 	flex-basis: 900px;
 	padding-top: 30px;
@@ -91,6 +96,16 @@
 .homepage-works {
 	flex-basis: 600px;
 	padding-top: 30px;
+}
+
+.experience-text{
+	padding-top:60px;
+	font-size:35px;
+}
+
+.homepage-animation{
+	/*transform: rotate(3deg);*/
+	text-align:center;
 }
 
 @media (max-width: 1024px) {
@@ -135,6 +150,10 @@
 	}
 
 	.homepage-projects {
+		flex-basis: auto;
+	}
+
+	.homepage-experiences {
 		flex-basis: auto;
 	}
 

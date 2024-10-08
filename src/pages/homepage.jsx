@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
+import { TypeAnimation } from 'react-type-animation';
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,25 +8,25 @@ import {
 	faGithub,
 	faStackOverflow,
 	faInstagram,
+	faLinkedin,
+	faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
-import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
+import AllExperiences from "../components/experience/allExperiences";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
-	const [logoSize, setLogoSize] = useState(80);
-	const [oldLogoSize, setOldLogoSize] = useState(80);
+	const [logoSize, setLogoSize] = useState(160);
+	const [oldLogoSize, setOldLogoSize] = useState(160);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -36,10 +36,10 @@ const Homepage = () => {
 		const handleScroll = () => {
 			let scroll = Math.round(window.pageYOffset, 2);
 
-			let newLogoSize = 80 - (scroll * 4) / 10;
+			let newLogoSize = 160 - (scroll * 4) / 10;
 
 			if (newLogoSize < oldLogoSize) {
-				if (newLogoSize > 40) {
+				if (newLogoSize > 80) {
 					setLogoSize(newLogoSize);
 					setOldLogoSize(newLogoSize);
 					setStayLogo(false);
@@ -104,26 +104,37 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="homepage.jpg"
+											src="headshot.jpg"
 											alt="about"
 											className="homepage-image"
+										/> 
+									</div>
+									<div class="homepage-animation">
+										<TypeAnimation
+											sequence={[
+												// Same substring at the start will only be typed once, initially
+												'Machine Learning Researcher',
+												1000,
+												'Fullstack Developer',
+												1000,
+												'Computer Science Student',
+												1000,
+											]}
+											speed={50}
+											style={{ 
+												fontSize: '2em',
+												
+											}}
+											repeat={Infinity}
 										/>
 									</div>
+
 								</div>
 							</div>
 						</div>
 
 						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
+							
 							<a
 								href={INFO.socials.github}
 								target="_blank"
@@ -134,23 +145,14 @@ const Homepage = () => {
 									className="homepage-social-icon"
 								/>
 							</a>
+							
 							<a
-								href={INFO.socials.stackoverflow}
+								href={INFO.socials.linkedin}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
+									icon={faLinkedin}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -164,35 +166,24 @@ const Homepage = () => {
 									className="homepage-social-icon"
 								/>
 							</a>
+							<a
+								href={INFO.socials.scholar}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<FontAwesomeIcon
+									icon={faGoogle}
+									className="homepage-social-icon"
+								/>
+							</a>
 						</div>
-
-						<div className="homepage-projects">
-							<AllProjects />
+						<div className="experience-text">
+							<div className="title" styles="padding-top:50px;">Experience</div>
 						</div>
-
-						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
-							</div>
-
-							<div className="homepage-works">
-								<Works />
-							</div>
+						
+						<div className="homepage-experiences">
+							<AllExperiences />
 						</div>
-
 						<div className="page-footer">
 							<Footer />
 						</div>

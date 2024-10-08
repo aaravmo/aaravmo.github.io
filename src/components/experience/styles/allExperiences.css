@@ -1,0 +1,59 @@
+
+.all-experiences-container {
+	display: block;
+	flex-wrap: wrap;
+	align-items: stretch;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-left: 100px;
+    width: 100%;
+}
+
+.all-experiences-experience {
+	width: calc(100%);
+	box-sizing: border-box;
+	padding: 0px;
+	overflow: hidden;
+    height:80%;
+}
+
+.vertical-line {
+    border:2px solid black;
+    width: 0px;
+    margin-left: 30px;
+    height:50px;
+    padding-left:0px;
+    padding-top:0px;
+    margin-left:14%;
+    margin-top:0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    opacity:0.1;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    padding-left:0px;
+    padding-top:0px;
+    margin-left:13.5%;
+    margin-top:0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    opacity:0.1;
+  }
+
+@media (max-width: 1000px) {
+	.all-experiences-experience {
+		width: calc(100%);
+        
+	}
+    .all-experiences-container {
+		width: calc(100%);
+        margin-left: calc(100% / 4)
+        
+	}
+}

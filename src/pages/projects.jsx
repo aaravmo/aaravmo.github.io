@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
 
+import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
@@ -12,11 +12,49 @@ import SEO from "../data/seo";
 import "./styles/projects.css";
 
 const Projects = () => {
+
+	const [stayLogo, setStayLogo] = useState(false);
+	const [logoSize, setLogoSize] = useState(160);
+	const [oldLogoSize, setOldLogoSize] = useState(160);
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			let scroll = Math.round(window.pageYOffset, 2);
+
+			let newLogoSize = 160 - (scroll * 4) / 10;
+
+			if (newLogoSize < oldLogoSize) {
+				if (newLogoSize > 80) {
+					setLogoSize(newLogoSize);
+					setOldLogoSize(newLogoSize);
+					setStayLogo(false);
+				} else {
+					setStayLogo(true);
+				}
+			} else {
+				setLogoSize(newLogoSize);
+				setStayLogo(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [logoSize, oldLogoSize]);
+
 	const currentSEO = SEO.find((item) => item.page === "projects");
+
+	const logoStyle = {
+		display: "flex",
+		position: stayLogo ? "fixed" : "relative",
+		top: stayLogo ? "3vh" : "auto",
+		zIndex: 999,
+		border: stayLogo ? "1px solid white" : "none",
+		borderRadius: stayLogo ? "50%" : "none",
+		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
+	};
 
 	return (
 		<React.Fragment>
@@ -33,27 +71,21 @@ const Projects = () => {
 				<NavBar active="projects" />
 				<div className="content-wrapper">
 					<div className="projects-logo-container">
-						<div className="projects-logo">
-							<Logo width={46} />
+						<div className="projects-logo" style={logoStyle}>
+							<Logo width={logoSize} link={false} />
 						</div>
 					</div>
 					<div className="projects-container">
 						<div className="title projects-title">
-							Things I’ve made trying to put my dent in the
-							universe.
+							Things I've been working on 
 						</div>
 
 						<div className="subtitle projects-subtitle">
-							I've worked on a variety of projects over the years
-							and I'm proud of the progress I've made. Many of
-							these projects are open-source and available for
-							others to explore and contribute to. If you're
-							interested in any of the projects I've worked on,
-							please feel free to check out the code and suggest
-							any improvements or enhancements you might have in
-							mind. Collaborating with others is a great way to
-							learn and grow, and I'm always open to new ideas and
-							feedback.
+							I've worked on a variety of projects during my time at university, particularly in machine learning and web development.
+							Much of what I've worked on is open-source, and my projects have utilized machine learning frameworks and libraries
+							(PyTorch, Tensorflow, OpenCV, Sk-learn) as well as full-stack frameworks and technologies (Springboot, React, Django, Node.js,
+							MySQL, MongoDB)  
+							
 						</div>
 
 						<div className="projects-list">

@@ -2,37 +2,24 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"I'm an undergraduate student, software developer, and machine learning researcher at USC. I have experience designing model architectures, training schemes, and datasets in a variety of ML domains, including image/video processing, signal processing, and natural language. I also have experience writing scalable, high-quality backend code in Python and Java. I'm a quick learner, and I enjoy tackling complex challenges in a variety of domains of software and data science.",
+		keywords: ["Aarav", "Aarav M", "Aarav Monga"],
 	},
 
-	{
-		page: "about",
-		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
-
-	{
-		page: "articles",
-		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
 
 	{
 		page: "projects",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"I've worked on a variety of projects during my time at university, particularly in machine learning and web development. Much of what I've worked on is open-source, and my projects have utilized machine learning frameworks and libraries (PyTorch, Tensorflow, OpenCV, Sk-learn) as well as full-stack frameworks and technologies (Springboot, React, Django, Node.js, MySQL, MongoDB).",
+		keywords: ["Aarav", "Aarav M", "Aarav Monga"],
 	},
 
 	{
 		page: "contact",
-		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
+		description:"test",
+		keywords: ["Aarav", "Aarav M", "Aarav Monga"]
+	}
+
 ];
 
 export default SEO;

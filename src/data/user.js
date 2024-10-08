@@ -1,82 +1,142 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
-		logo: "../logo.png",
+		title: "Portfolio",
+		name: "Aarav M",
+		email: "armonga@usc.edu",
+		logo: "../newhomepage.png",
 	},
 
 	socials: {
-		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
-		stackoverflow: "https://stackoverflow.com/",
-		facebook: "https://facebook.com/",
+		github: "https://github.com/aaravmo",
+		linkedin: "https://linkedin.com/in/armonga",
+		scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=V2pd-5gAAAAJ",
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "Hi! I'm Aarav Monga",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"I'm an undergraduate student, software developer, and machine learning researcher at USC. I have experience designing model architectures, training schemes, and datasets in a variety of ML domains, including image/video processing, signal processing, and natural language. I also have experience writing scalable, high-quality backend code in Python and Java. I'm a quick learner, and I enjoy tackling complex challenges in a variety of domains of software and data science.",
 	},
 
-	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
-		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
-	},
-
-	articles: {
-		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
-		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-	},
+	
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "Debiasing framework for Image Recognition Models (Ongoing)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Graph Signal Processing techniques for training image recognition models with reduced biases",
+			logo: "clustering.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/aaravmo/unsupervised-bias-detection",
+			tools: ["PyTorch", "OpenCV", "Tensorflow",],
+		},
+		{
+			title: "Multiparty Engagement Detection (Ongoing)",
+			description:
+				"A novel adaptation of generative models for speaker/listener behavior to human engagement detection",
+			logo: "eng.jpg",
+			linkText: "View Project",
+			link: "",
+			tools: ["PyTorch", "OpenCV", "Tensorflow", "CUDA", "HPC"],
 		},
 
 		{
-			title: "Project 2",
+			title: "Multimodal Speech Recognition for Language-guided Embodied Agents",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+				"Audio-visual speech recognition models for robust spoken human-robot interaction in noisy environments (Interspeech 2023)",
+			logo: "audio.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://arxiv.org/abs/2302.14030",
+			tools: ["PyTorch", "OpenCV",],
 		},
 
 		{
-			title: "Project 3",
+			title: "Demo Stock Trading Platform",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
+				"Spring Boot web app with MySQL database for beginner traders to buy and hold stocks in real-time with fake cash",
+			logo: "stock.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/aaravmo/stock-trading",
+			tools: ["Spring Boot", "JavaScript", "SQL", "React.js"],
 		},
 
 		{
-			title: "Project 4",
+			title: "This Website!",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Responsive personal project website made using React and Bootstrap",
+			logo: "website.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "/",
+			tools: ["React.js", "Node.js", "Bootstrap", "CSS", "HTML"],
 		},
 
 		{
-			title: "Project 5",
+			title: "Domain-Adaptive Transformer Compression",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"An adaptation of an SVD-based compression technique proposed in <div className = \"project-desc-link\"><a href=\"\">Masana et. al 2017</a></div> to transformer models",
+			logo: "compression.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/aaravmo/transformer-compression",
+			tools: ["PyTorch", "Tensorflow",],
+		},
+		
+		{
+			title: "Multimodal ASR Hypothesis Reranking",
+			description:
+				"A simple framework for rescoring hypotheses generated by an ASR model using vision and language input",
+			logo: "reranking.jpg",
+			linkText: "View Project",
+			link: "https://github.com/aaravmo/audio-visual-reranking",
+			tools: ["PyTorch"],
+		},
+		{
+			title: "COVID-19 Lung Data Analysis",
+			description: "A web x-ray reporting interface to automate reporting & info retrieval for > 500 patients, and data analysis and visualization for a large-scale COVID-19 lung study (Springer Nature Medical Journal)",
+			linkText: "View Project",
+			logo: "lung.png",
+			link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7787585/",
+			tools: ["Node.js", "MongoDB", "JavaScript", "Python"]
+		}
+		,
+		{
+			title: "SEMPI: Engagement Detection Dataset",
+			description:
+				"SEMPI contains >7.5 hours of annotated single-speaker video clips in video-mediated multiparty interaction, with baseline multimodal models for engagement detection (ICMI 2024)",
+
+			logo: "dataset.png",
+			linkText: "View Project",
+			link: "/projects",
+			tools: ["PyTorch", "OpenCV", "AWS", "Google Cloud",],
+		},
+	],
+	experiences:[
+		{
+			title: "ML Research & Software Intern",
+			company: "IHP Lab",
+			description: "<ul><li>Co-led data collection pipeline for a human interaction engagement dataset</li><li>Scripts to automate data cleaning, segmentation, cropping, and labelling for >20k hours of video </li><li>Multimodal (video, text, audio, face landmarks) model training for engagement detectiion </li><li>Qualtrics survey design and AWS Lambda Python backend for serving batched videos for annotation on Prolific</li> </ul>",
+			logo: "ict.png",
+			tools: ["GCP SDK", "OpenAI API", "HPC", "AI/ML", "AWS Lambda"]
+		},
+		{
+			title: "VP of Projects",
+			company: "CAIS++ @USC",
+			description: "<ul><li>Sourcing & managing undergrad AI research projects with research groups at USC</li><li>Guiding projects in NLP, Computer Vision, Signal Processing for local conference presentations</li> </ul>",
+			logo: "cais.png",
+			tools: ["Project Management"]
+		},
+		{
+			title: "Software Development Intern (AI/ML)",
+			company: "Kernel Tools",
+			description: "<ul><li>Model training and deployment to extract key info from spoken commands using custom synthesized NER dataset</li><li>Automatic, targeted discord reminders for active customer issues on Linear and Spaces</li><li>Migration to GCP: Service containerization and PostgreSQL database deployment</li></ul>",
+			logo: "kernel.jpg",
+			tools: ["Backend", "GKE", "SQL", "Docker", "MLOps", "AI/ML", "APIs"]
+		},
+		{
+			title: "Undergraduate Researcher",
+			company: "GLAMOR Lab",
+			description: "<ul><li>Multimodal Automatic Speech Recognition model training using visual signals for robust speech transcription in noisy human-robot interaction</li><li>Downstream task performance evaluation in simulation using transcripts generated by our models (Ai2Thor)</li></ul",
+			logo: "viterbi.jpg",
+			tools: ["HPC", "AI/ML"]
 		},
 	],
 };

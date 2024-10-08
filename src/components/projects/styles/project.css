@@ -22,12 +22,17 @@
 	transition: color 0.3s ease-in-out;
 }
 
+.project:hover .project-desc-link {
+	color: var(--link-color);
+	transition: color 0.3s ease-in-out;
+}
+
 .project-container {
 	padding: 30px;
 }
 
 .project-logo {
-	width: 30px;
+	width: 70px;
 }
 
 .project-logo img {
@@ -63,6 +68,17 @@
 .project-link-text {
 	padding-left: 20px;
 	font-weight: 700;
+}
+
+.project-tool{
+	margin-right:5px;
+	padding-left: 4px;
+	padding-right: 4px;
+	font-size:10px;
+	background:#deba21;
+	border-radius: 5px;
+	color:white;
+
 }
 
 @media (max-width: 600px) {
